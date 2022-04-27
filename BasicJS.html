@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="printHelloWorld()" style="height: 20px; width: 20px;"> Click Here</button>
+    <button onclick="checkScope()" > Click Here</button>
+    <h3 id="myH">Hello leraners</h3>
+    <button onclick="myFunc()">Click here</button>
+    <h3>Hello Interns</h3>
+    <button onclick="myDoc()">Click here</button>
+    <h3>Hello Freelancers</h3>
+    <button onclick="myWin()">Click here</button>
+    <h3>This is console output statements</h3>
+    <button onclick="myCon()">Click Here</button>
+    <h3 id="myPro">Enter something</h3>
+    <p>Choose your option</p>
+    <h3 id="myConf"></h3>
+    <div id="root">
+   <form name="myform" onsubmit="validate()" method="post">
+       Name: <input type="text" name="name">
+       <input type="submit" value="submit">
+   </form>
+</div>
+<div id="root1">
+    <form name="myform1" onsubmit="validateNumber()" method="post">
+        Phone number: <input type="text" name="contactNumber">
+        <input type="submit" value="submit">
+    </form>
+ </div>
+ <div id="root2">
+    <form name="myform2" onsubmit="validateDate()" method="post">
+    DOB: <input type="date" name="DOB">
+        <input type="submit" value="submit">
+    </form>
+ </div>
+    <script src="BasicJS.js"></script>
+</body>
+</html>
