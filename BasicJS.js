@@ -536,3 +536,210 @@ var f = new Date("October 13, 2014 11:13:00");
             document.getElementById("root2").innerHTML = value   //This function will make sure that the user is old enough to understand your product
         }
  }
+ 
+ var myVar = " this is a global variable and you can access it anywhere ";
+
+function checkScope(){
+    var myVar = "This is local variable and you can not access outside of local scope";
+    document.write(myVar)
+}
+checkScope();
+
+
+//example of creating object
+let person={
+    name:"Deependra Kumar",
+    age:21,
+    address:"Mohana Jalaun",
+    hobbies:["Cricket", "Football", "Volleyball", "Squash"]
+}
+
+
+//example of creating arrays
+let arr = ["Deependra Kumar", "Kanpur", "Engineering"]
+
+ 
+//example of creating function
+function name(){
+    console.log("By using this function we can write the name of any person who is attending this meeting")
+} 
+
+
+
+ //example of arithmetic operator
+
+var a = 20;
+var b = 30;
+var sum = a + b;
+console.log(typeof sum)
+
+var c = 14;
+var d = c++;
+var e = d;
+
+  //example of assignment operator
+  var count = 15;
+  count %= 5;  //remainder is zero
+  console.log(count)
+
+
+  var x = 100;
+  var y = 20;
+   var z = x>y;
+   
+   console.log(z)
+
+
+//Example of logical operator
+var x = 20;
+if((x%2==0) && (x % 5 == 0)){
+    console.log("The given number is divisible by 10")
+} else{
+    console.log("The number is not divisible by 10")
+}
+
+//example of inner HTML
+
+
+ 
+function myFunc(){
+    var str = "Welcome to Kriyax internship for getting a wonderful opportunity"
+   const element = document.getElementById("myH");
+   element.innerHTML = str
+   document.write(str)
+}
+
+
+
+//example of document.write()
+
+// function myFunc1(){
+//     var str = "Welcome to Kriyax on your first day and we have arranged a special surprise for every employee"
+//     document.write(str)
+// }
+
+function myFunc1(){
+    var str = "Welcome to Kriyax on your first day and we have arranged a special surprise for every employee"
+    document.write(str)
+}
+
+
+//example of console.log()
+
+
+function myFunc2(){
+    var str = "Welcome to Kriyax internship pro"
+    console.log(str)
+}
+
+
+//example of window.alert()
+
+// function myFunc3(){
+//     var str = "Welcome to Kriyax as an investor"
+//     window.alert(str)
+// }
+
+function myFunc3(){
+    var str =  "Welcome to Kriyax for being a supporter as an investor"
+    window.alert(str)
+}
+
+
+//Javascript input statements
+//There are two statements to accept user data to provide information according to their need
+//window.prompt() and window.confirm()
+
+//example of window.prmpt() It accepts any type of data from user but it saves as a string
+
+var x = window.prompt();
+const element = document.getElementById("myHeader")
+element.innerHTML = x
+
+
+//example of window.confirm()
+var x = window.confirm();
+const element1 = document.getElementById("myHeader")
+if(x == true){
+    element1.innerHTML = "Congratulations, for becoming a part of Kriyax internship program"
+} else{
+    element1.innerHTML = "Please come back later and try it again"
+}
+
+
+//Javascript arrays - It stores multiple values in a single variable  
+//Javascript array operations element by element operatons on matrices
+//Filter method, map method, concat method, push method, pop method, find method, slice method, sort method
+
+var age = [12, 32, 35, 21, 36, 32, 53, 23, 40]
+  
+ function checkEligibility(age){
+     return age >=19;
+ }
+ var selected = age.filter(checkEligibility)
+
+ document.write("List of selected candidates ", selected)
+ console.log("List of selected candidates ", selected);
+  
+
+ function addFour(age){
+     return (age + 4);
+ }
+
+ var selected1 = age.map(addFour);
+
+ document.write("age of candidates after four years ", selected1)
+ console.log("age of candidats after four years ", selected1)
+
+ var Frontend = ["HTML", "CSS", "Javascript", "Bootstrap", "ReactJS"];
+ var Backend = ["NodeJS", "Mongodb", "ExpressJS"];
+
+ var selected3  = Frontend.concat(Backend)
+ console.log("List of tech stack used for creation of websites ", selected3)
+ document.write("List of tech stack used for creation of fully functional website", selected3)
+
+ Frontend.push("Tailwind CSS")
+ Backend.unshift("REST APIs")
+ console.log(Frontend)
+ console.log(Backend)
+
+ Frontend.shift()
+ Backend.pop()
+ console.log(Frontend)
+ console.log(Backend)
+
+
+ //Find method - This method return the first element that pass the test and will not check the other value
+
+ function checkFind(age){
+     return age>18;
+ }
+ var selected4 = age.find(checkFind)
+
+ console.log(selected4)
+
+
+ //Slice method - It selects the element from the original array and return them as a new array object 
+ //This method has two arguments, First argument is Start index and second argument is the end index of an array
+ var letters = ["a", "b", "c", "d"]
+ var selected5 = letters.slice(1,3)
+ console.log(selected5)
+
+
+ //Sort method - This method can sort the elements in either ascending or descending order
+ //default is ascending order
+ //This method can provide incorrect results while working with numbers and that's why we use compare function is used to solve the problem
+
+
+ var data = [1, 100, 35, 29, 209, 25, 92, 39, 193, 23]
+ var data1 = [32, 23, 210, 39, 92, 28, 19, 183, 321]
+
+ //without compare function
+ data.sort()
+ console.log(data)
+
+ function checkSort(c, d){
+     return d - c ;
+ }
+ var selected6 = data1.sort(checkSort)
+ console.log(selected6)
